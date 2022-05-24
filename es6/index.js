@@ -58,3 +58,46 @@ let team2 = ['Vale','Yesica','Camila'];
 let education = ['David', ...team1, ...team2]; // unir equipos por tre puntos ...
 
 console.log(education);
+
+// Let y Var
+
+{
+    var globalVar = 'Global Var'
+}
+
+{
+    let globalLet = 'Global Let' // let es solo para el scope
+    console.log(globalLet);
+}
+
+console.log(globalVar); // var vive en global
+
+// Const
+
+const a = 'b';
+a = 'a'; // no deja cambiar el valor, mantiene siempre la asignacion inicial 
+console.log(a)
+
+//Propiedad de objetos mejorada
+
+let name = 'Nestor';
+let age = 30;
+
+obj = { name: name, age: age}; // es5
+
+obj2 = { name, age}; // es6 De esta forma es mas amigable para crear los elemnetos
+console.log(obj2);
+
+
+// Arrow function, funciones de tipo flecha
+
+const names = [
+    {name: 'Nestor', age: 30},
+    {name: 'Centeno', age: 29}
+]
+
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+})
+
+let lsitOfNames2 = names.map(item => console.log(item.name));
